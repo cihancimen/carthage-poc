@@ -24,9 +24,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixh-Xx-ZFz">
-                                <rect key="frame" x="167" y="392" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixh-Xx-ZFz">
+                                <rect key="frame" x="167" y="378.5" width="41" height="30"/>
                                 <state key="normal" title="Crash"/>
                                 <connections>
                                     <action selector="buttonTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="k15-zv-jXS"/>
@@ -37,9 +36,13 @@
                         <constraints>
                             <constraint firstItem="aWT-3a-CAE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0O7-jz-wWr"/>
                             <constraint firstItem="aWT-3a-CAE" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="3n4-Wh-Mfd"/>
+                            <constraint firstItem="Ixh-Xx-ZFz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="167" id="912-n9-2BJ"/>
+                            <constraint firstItem="Ixh-Xx-ZFz" firstAttribute="centerX" secondItem="aWT-3a-CAE" secondAttribute="centerX" id="995-Xh-GZu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="aWT-3a-CAE" secondAttribute="top" id="A5X-Ys-rJi"/>
                             <constraint firstItem="aWT-3a-CAE" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="BYg-nt-n1o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ixh-Xx-ZFz" secondAttribute="trailing" symbolic="YES" id="cgh-dx-tLB"/>
                             <constraint firstItem="aWT-3a-CAE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mWe-xO-Sue"/>
+                            <constraint firstItem="Ixh-Xx-ZFz" firstAttribute="centerY" secondItem="aWT-3a-CAE" secondAttribute="centerY" constant="50" id="qAG-V9-Oia"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
