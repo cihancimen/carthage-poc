@@ -13,6 +13,7 @@
 		3EFB805F219B4B4900665A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EFB805E219B4B4900665A8E /* Assets.xcassets */; };
 		3EFB8062219B4B4900665A8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFB8060219B4B4900665A8E /* LaunchScreen.storyboard */; };
 		3EFB806D219B4B4900665A8E /* CarthagePrecompiledPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB806C219B4B4900665A8E /* CarthagePrecompiledPOCTests.swift */; };
+		3EFB809E219B5A0500665A8E /* CarthageDep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFB809D219B5A0500665A8E /* CarthageDep.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		3EFB8068219B4B4900665A8E /* CarthagePrecompiledPOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarthagePrecompiledPOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EFB806C219B4B4900665A8E /* CarthagePrecompiledPOCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthagePrecompiledPOCTests.swift; sourceTree = "<group>"; };
 		3EFB806E219B4B4900665A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EFB809D219B5A0500665A8E /* CarthageDep.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CarthageDep.framework; path = Carthage/Build/iOS/Static/CarthageDep.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EFB809E219B5A0500665A8E /* CarthageDep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		3EFB8056219B4B4700665A8E /* CarthagePrecompiledPOC */ = {
 			isa = PBXGroup;
 			children = (
+				3EFB809D219B5A0500665A8E /* CarthageDep.framework */,
 				3EFB8057219B4B4700665A8E /* AppDelegate.swift */,
 				3EFB8059219B4B4700665A8E /* ViewController.swift */,
 				3EFB805B219B4B4700665A8E /* Main.storyboard */,
@@ -106,6 +110,7 @@
 				3EFB8050219B4B4700665A8E /* Sources */,
 				3EFB8051219B4B4700665A8E /* Frameworks */,
 				3EFB8052219B4B4700665A8E /* Resources */,
+				3EFB809F219B5D7700665A8E /* Run Script - Carthage */,
 			);
 			buildRules = (
 			);
@@ -191,6 +196,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EFB809F219B5D7700665A8E /* Run Script - Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Static/CarthageDep.framework",
+			);
+			name = "Run Script - Carthage";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CarthageDep.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3EFB8050219B4B4700665A8E /* Sources */ = {
@@ -362,6 +390,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74G6H8XY8B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
 				INFOPLIST_FILE = CarthagePrecompiledPOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,6 +412,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74G6H8XY8B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
 				INFOPLIST_FILE = CarthagePrecompiledPOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
