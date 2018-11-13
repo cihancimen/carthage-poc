@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         label.text = CarthageDep.Constants.greeting
     }
 
+    @IBAction func buttonTap() {
+        CarthageDep.crash()
+    }
 
 }
 
